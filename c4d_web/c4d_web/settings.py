@@ -21,6 +21,7 @@ DOWNLOAD_DELAY = 5
 SELENIUM_DRIVER_NAME = 'firefox'
 SELENIUM_DRIVER_EXECUTABLE_PATH = which('geckodriver')
 SELENIUM_DRIVER_ARGUMENTS = ['-headless']  # '--headless' if using chrome instead of firefox
+
 RETRY_TIMES = 3
 # Retry on most error codes since proxies fail
 # for different reasons
