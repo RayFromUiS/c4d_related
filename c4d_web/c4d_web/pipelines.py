@@ -10,4 +10,6 @@ from itemadapter import ItemAdapter
 
 class C4DWebPipeline:
     def process_item(self, item, spider):
+        if spider.db[spider.collection].find_one({'url': item.get('url')}):
+            spider.db[spider.collection_name].insert_one(ItemAdapter(item).asdict())
         return item

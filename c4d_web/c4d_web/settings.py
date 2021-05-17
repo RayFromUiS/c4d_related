@@ -9,6 +9,8 @@
 
 from shutil import which
 import os
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
 BOT_NAME = 'c4d_web'
 
 SPIDER_MODULES = ['c4d_web.spiders']
@@ -82,7 +84,7 @@ ITEM_PIPELINES = {
 # SQL_CONNECT_STRING = 'mysql+pymysql://root:jinzheng1706@139.198.191.224:3308/news_oil'
 # SQL_DB_NAME = 'news_oil'
 
-MONGO_URI = f'mongodb://root:{os.environ.get("DB_PRV_ROOT_PASS")}@{os.environ.get("DB_PRV_HOST")}:27017/'
+MONGO_URI = f'mongodb://root:{os.environ.get("DB_PRV_ROOT_PASS")}@localhost:27017/'
 MONGO_DATABASE_WECHAT = 'c4d'
 IMAGES_STORE = '/Users/root1/Documents/c4d_images'
 # Disable cookies (enabled by default)
