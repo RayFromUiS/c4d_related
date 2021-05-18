@@ -87,7 +87,7 @@ ITEM_PIPELINES = {
 
 MONGO_URI = f'mongodb://root:{os.environ.get("DB_PRV_ROOT_PASS")}@139.198.172.10:27017/'
 MONGO_DATABASE_WECHAT = 'c4d'
-IMAGES_STORE = '/Users/root1/Documents/c4d_images'
+IMAGES_STORE = '/home/ubuntu/c4d_images'
 # FILES_STORE = '/Users/root1/Documents/c4d_files'
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
