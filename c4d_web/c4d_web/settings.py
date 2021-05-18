@@ -18,7 +18,7 @@ NEWSPIDER_MODULE = 'c4d_web.spiders'
 
 
 # ROBOTSTXT_OBEY = True
-DOWNLOAD_DELAY = 5
+DOWNLOAD_DELAY =  1
 # RANDOMIZE_DOWNLOAD_DELAY = True
 SELENIUM_DRIVER_NAME = 'firefox'
 SELENIUM_DRIVER_EXECUTABLE_PATH = which('geckodriver')
@@ -76,7 +76,8 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
 ITEM_PIPELINES = {
-    'scrapy.pipelines.images.ImagesPipeline': 1,
+    'c4d_web.pipelines.MyImagesPipeline': 1,
+    # 'c4d_web.pipelines.MyFilesPipeline': 1,
     'c4d_web.pipelines.C4DWebPipeline': 300,
 
 
@@ -87,6 +88,7 @@ ITEM_PIPELINES = {
 MONGO_URI = f'mongodb://root:{os.environ.get("DB_PRV_ROOT_PASS")}@139.198.172.10:27017/'
 MONGO_DATABASE_WECHAT = 'c4d'
 IMAGES_STORE = '/Users/root1/Documents/c4d_images'
+# FILES_STORE = '/Users/root1/Documents/c4d_files'
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
 

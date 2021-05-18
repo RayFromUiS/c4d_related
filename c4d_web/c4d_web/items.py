@@ -16,9 +16,10 @@ class C4DWebItem(scrapy.Item):
     tags = scrapy.Field()
     image_plx = scrapy.Field()
     map_files = scrapy.Field()
-    image_preview = scrapy.Field()
     crawl_time = scrapy.Field()
     images = scrapy.Field()
     image_urls = scrapy.Field()
     image_downloaded_status =scrapy.Field()
+    file_url = scrapy.Field()
+    formdata = scrapy.Field()
 
